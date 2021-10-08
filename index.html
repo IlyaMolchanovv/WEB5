@@ -13,7 +13,7 @@
 	placeholder=”укажите цену товара”>
 	<br>
 
-	<h4>Введите цену товара</h4>		
+	<h4>Введите количество товара</h4>		
         <input type="text" id="count" value=" "
         placeholder=”укажите количество единиц товара”>
 	<br>
@@ -26,9 +26,9 @@
 	function raschitat() {
 	    cost = document.getElementById('cost').value;
 	    count = document.getElementById('count').value;
-	    if(cost == ""){
+	    if(cost == " "){
 	        alert("Вы не указали цену");
-	    } else if(count == ""){
+	    } else if(count == " "){
 		alert("Вы не указали количество");
             } else {							
                 stoimost = cost*count;
