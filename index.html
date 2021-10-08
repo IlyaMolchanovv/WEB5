@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Калькулятор</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+</head>
+<body>
+	<h3>Рассчет стоимости товара</h3>
+				
+	<input type=”text” id=”cost” value=”” 					
+	placeholder=”укажите цену товара”>
+				
+	<input type=”text” id=”count” value=”” 
+        placeholder=”укажите количество единиц товара”>
+				
+	<button onclick=”raschitat()”>Рассчитать стоимость</button>
+
+	<div id="stoimost"></div>
+				
+	<script type="text/jаvascript">
+	function raschitat() {
+	    cost = document.getElementById('cost').value;
+	    count = document.getElementById('count').value;
+	    if(cost == ""){
+	        alert("Вы не указали цену");
+	    } else if(count == ""){
+		alert("Вы не указали количество");
+            } else {							
+                stoimost = cost*count;
+                document.getElementById('stoimost').innerHTML = "Стоимость равна: "+ stoimost +" р.";
+            }
+        }
+</script>
+</body>
+</html>
 
