@@ -3,39 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Калькулятор</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+        <script src="script.js"></script>
 </head>
 <body>
-	<h3>Рассчет стоимости товара</h3>
-	
-	<h4>Введите цену товара</h4>		
-	<input type="text" id="cost" value=" "					
-	placeholder="укажите цену..">
-	<br>
-
-	<h4>Введите количество товара</h4>		
-        <input type="text" id="count" value=" "
-        placeholder="укажите количество.." >
-	<br>
-	</br>		
-	<button onclick="raschitat()">Рассчитать стоимость</button>
-
-	<div id="stoimost"></div>
-				
-	<script type="text/jаvascript">
-	function raschitat() {
-	    cost = document.getElementById('cost').value;
-	    count = document.getElementById('count').value;
-	    if(cost == " "){
-	        alert("Вы не указали цену");
-	    } else if(count == " "){
-		alert("Вы не указали количество");
-            } else {							
-                stoimost = parseInt(cost)*parseInt(count);
-                document.getElementById("stoimost").innerHTML = "Стоимость равна: "+ stoimost +" р.";
-            }
-        }
-</script>
+	<form > 
+          <div>Цена товара: </div> 
+          <div> <input type="text" id="product_price" placeholder="Введите цену..."> </div> 
+          <div>Количество единиц товара: </div> 
+          <div> <input type="text" id="product_count" placeholder="Введите количество..."> </div> 
+          <button onclick="return calculate();">Рассчитать</button> 
+          <div id="sum"></div> 
+        </form> 
 </body>
 </html>
 
