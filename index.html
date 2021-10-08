@@ -9,16 +9,16 @@
 	<h3>Рассчет стоимости товара</h3>
 	
 	<h4>Введите цену товара</h4>		
-	<input type=”text” id=”cost” value=" "					
-	placeholder=”укажите цену товара”>
+	<input type="text" id="cost" value=" "					
+	placeholder="укажите цену..">
 	<br>
 
 	<h4>Введите количество товара</h4>		
         <input type="text" id="count" value=" "
-        placeholder=”укажите количество единиц товара”>
+        placeholder="укажите количество.." >
 	<br>
 	</br>		
-	<button onclick=”raschitat()”>Рассчитать стоимость</button>
+	<button onclick="raschitat()">Рассчитать стоимость</button>
 
 	<div id="stoimost"></div>
 				
@@ -31,7 +31,7 @@
 	    } else if(count == " "){
 		alert("Вы не указали количество");
             } else {							
-                stoimost = cost*count;
+                stoimost = parseInt(cost)*parseInt(count);
                 document.getElementById("stoimost").innerHTML = "Стоимость равна: "+ stoimost +" р.";
             }
         }
